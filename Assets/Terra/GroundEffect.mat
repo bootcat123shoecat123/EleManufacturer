@@ -76,12 +76,12 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _lineWidth: 0.07
+    - _lineWidth: 0.02
     - _size: 30
     m_Colors:
     - _Color: {r: 0.557826, g: 1, b: 0.51886785, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _color: {r: 0.76037735, g: 1, b: 0.7850408, a: 1}
+    - _color: {r: 0, g: 0, b: 0, a: 1}
     - _size: {r: 10, g: 10, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &162884241895632376

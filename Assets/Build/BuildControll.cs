@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class BuildControll : MonoBehaviour
 {
+    [SerializeField] public Vector2 size;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+     
 }

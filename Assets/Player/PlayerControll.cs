@@ -8,8 +8,14 @@ public class PlayerControll : MonoBehaviour
     Touch touch;
     [SerializeField]float dragBeginTime = 0.3f;
     [SerializeField] float moveSpeed = 1f;
-    float coldDawn = 0;
 
+    [SerializeField] List<GameObject> Builds;
+    float coldDawn = 0;
+    int currentBuildNumber=0;
+
+    public Vector3 targetPosition { get; private set; }
+
+    /// </summary>
     // Start is called before the first frame update
     private void Awake()
     {
@@ -55,8 +61,9 @@ public class PlayerControll : MonoBehaviour
         else
         {
             transform.GetChild(0).GetComponent<Animator>().SetBool("IsMove", false);
-
+            GetComponent<Rigidbody>().velocity *= 0.1f;
         }
+        targetPosition = transform.position;
 #endif
         if (Input.touchCount > 0)
         {
@@ -95,7 +102,7 @@ public class PlayerControll : MonoBehaviour
     public void Build()
     {
 
-        FindAnyObjectByType<TerraControll>().BuildAtPosition(transform.position);
+        FindAnyObjectByType<TerraControll>().BuildAtPosition(targetPosition, Builds[currentBuildNumber]);
     }
     
 }

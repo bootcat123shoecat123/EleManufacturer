@@ -62,7 +62,7 @@
     <Compile Include="Assets\Player\PlayerControll.cs" />
     <Compile Include="Assets\Terra\TerraControll.cs" />
     <Compile Include="Assets\AssetConfig.cs" />
-    <Compile Include="Assets\BuildControll.cs" />
+    <Compile Include="Assets\Build\BuildControll.cs" />
     <Compile Include="Assets\Player\Wizard - 2D Character\Demo\SimplePlayerController.cs" />
     <Compile Include="Assets\Player\Wizard - 2D Character\Demo\WizDemo1.cs" />
   </ItemGroup>

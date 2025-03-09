@@ -10,9 +10,9 @@ namespace Assets
     {
         public struct CheseConfig
         {
-            static public float ceilSize = 6;
-        static public int row=5;
-        static public int col=5; 
+            static public float ceilSize = 1;
+        static public int row=42;
+        static public int col=42; 
         }
         
 
