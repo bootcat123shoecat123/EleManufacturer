@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
@@ -29,6 +30,32 @@ public class PlayerControll : MonoBehaviour
     void Update()
     {
         CharacterMove();
+        if (!Input.GetMouseButtonDown(0))
+        {
+            return;
+        }
+        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+         
+        Vector3 mouseRayEnd = mouseRay.GetPoint(100);
+        Debug.DrawRay(mouseRay.origin, mouseRayEnd, Color.red,3f);
+        RaycastHit hit=new RaycastHit();
+        if (Physics.Raycast(mouseRay.origin, mouseRayEnd, out hit))
+        {
+            if (FindAnyObjectByType<TerraControll>() && hit.collider?.gameObject.layer==6) {
+                targetPosition=hit.point;
+                Build();
+            Debug.Log(targetPosition);
+            }
+
+
+        }
+        
+
+        // 判斷是否點擊到自己本身
+        if (hit.collider?.gameObject == gameObject)
+        {
+            Debug.Log(gameObject.name);
+        }
     }
 
     private void DragRelease()
