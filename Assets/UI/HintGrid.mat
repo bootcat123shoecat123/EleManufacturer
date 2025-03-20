@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6470007416884593001
+--- !u!114 &-3361686541713311850
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: HintGrid
   m_Shader: {fileID: -6465566751694194690, guid: d4fc830038e9d5e40a7bef9ca5dcec8b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -93,6 +93,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _InsideColor: {r: 0, g: 0, b: 0, a: 0.70980394}
     - _color: {r: 0, g: 0, b: 0, a: 1}
-    - _size: {r: 42, g: 42, b: 0, a: 0}
+    - _size: {r: 6, g: 6, b: 0, a: 0}
   m_BuildTextureStacks: []
